@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                /* background-color: black; */
+            } /* This is a standard universal style but has low priorty so can be overwritten easily */
+
+            /* div{
+                height: 50px;
+                /* For height percentage unit don't work for example "height: 80%;, only for width works" */
+                /* But view height works */
+                /* width: 60vw;  */
+                /*vw stands for view width and vh stands for view height*/
+                /* background-color: purple;
+                padding: 10px; */
+
+                /* border: 5px solid crimson;
+                margin-bottom: 10px; */
+
+                /* margin: 10px 10px 10px 50px;  */
+                /*This type of styling uses all four corners in one line (clockwise) & the same can be used with padding*/
+                /* OR
+                You can use top-margin, top-padding etc
+                
+            }*/
+            
+            /* div:nth-child(1){
+                width: 80%;
+            }
+            div:nth-child(2){
+                width: 60%;
+            }
+            div:nth-child(3){
+                width: 40%;
+            }
+            div:nth-child(4){
+                width: 20%;
+            } */
+
+            .parent{
+                height: 50px;
+                background-color: purple;
+                padding: 10px;
+                width: 60%;
+            }
+
+            .child{
+                height: 30px;
+                background-color: dodgerblue;
+                width: 50%;
+                /* Percentage is relative to the parent and vw is relative to the viewport */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged.
+        </div> -->
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <!-- <div></div>
+        <div></div>
+        <div></div> -->
+    </body>
+    
+
+</html>

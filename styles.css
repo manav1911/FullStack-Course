@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsla(230, 73%, 53%, 1);
+    background: linear-gradient(90deg, hsla(230, 73%, 53%, 1) 0%, hsla(274, 79%, 45%, 1) 100%);
+    height: 100vh;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#314EDF", endColorstr="#7E18CC", GradientType=1 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.container{
+    width: 389px;
+    height: 535px;
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div.container header{
+    text-align: center;
+}
+/* Container Logo */
+img.logo{
+    width: 48px;
+    margin: 0px auto;
+}
+
+div.container{
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+    margin-top: 24px;
+}
+
+div.container h2.title span{
+    color: #6422CD;
+}
+
+div.container div.login-message{
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    margin-top: 24px;
+    
+}
+
+div.container form{
+    margin-top: 24px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    justify-content: space-between;
+    position: relative;
+}
+
+div.container form input{
+    outline: none;
+    padding: 8px 12px;
+    height: 32px;
+    border: 1px solid rgba(209 213 219);
+    /* The above code is to make the code more clean but excatly the samething as below */
+    /* border-radius: 5px;
+    border-width: 10px;
+    border-color: orange; */
+    font-size: 14px;
+}
+
+div.container form input:focus{
+    border: 1px solid purple;
+}
+
+div.container form div.pass{
+    display: flex;
+    align-items: center;
+}
+
+div.container form div.pass input{
+    flex-grow: 1;
+}
+
+div.container form div.pass svg{
+    margin-left: 10px;
+    position: relative;
+}
+
+div.container div.forgot{
+    font-weight: 90;
+    font-size: 13px;
+    color: purple;
+    padding-left: 50%;
+}
+
+div.container div.btn{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+div.container div.btn div.btnLogin{
+    background-color: #6422CD;
+    color: aliceblue;
+    align-items: center;
+    text-align:center;
+    
+    border-radius: 10px;
+}

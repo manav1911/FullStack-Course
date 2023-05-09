@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* div{
+                width: 200px;
+                height: 200px;
+                /* margin: 40px; */
+                /* background-color: black; */
+
+                /* Position Relative */
+                /* position: relative;  */
+                /* left: 50px; */
+                /* top: 30px; */
+                /* In percentage width relative signifies it is relative to the parent */
+                /* While using relative in positioning means it is relative to itself/actual position */
+                
+                /* Position absolute it refers to positioning the element relative to its parent*/
+                /* position: absolute; */
+                /* bottom: 0; */
+                /* right: 0; 
+            } */
+
+            /* div img{
+                width: 100%;
+            } */
+
+            /* An element can only be styles absolte when its immediate parent has positioning relative or absolute */
+            div.parent{
+                height: 200px;
+                width: 200px;
+                background-color: orange;
+                position: absolute;
+                /* bottom: 50px; */
+            }
+
+            /* When an element is positioned static, left,right, etc don't have any effect */
+
+            div.child{
+                height: 50px;
+                width: 50px;
+                background-color: purple;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div>
+            <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        </div> -->
+
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        
+    </body>
+    
+
+</html>
