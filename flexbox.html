@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Flexbox</title>
+        <style>
+            *{
+                /* width: 200px; */
+                /* height: 200px; */
+                /* box-sizing: border-box; */
+                /* Box-sizing:border-box; is used because the margin and padding are factored in the width and height calculation */
+            }
+
+            /* Span has not got any height or width as it an inline element */
+            /* span{
+                width: 200px;
+                height: 200px;
+                background-color: orange;
+                display: block;
+            } */
+
+            /* Div is a block element so it has both height and width */
+            /* Using the display property one can change the deault property of an element eg an inline can be changed to block and vice versa */
+            /* div{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                background-color: purple;
+                display: inline-block;
+            } */
+
+            div.parent{
+                background-color: black;
+                height: 100vh;
+                width: 700px;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            /* Jusify-content aligns items at primary axis
+            while align-items aligns items at non-primary axis */
+
+            /* If the child elements are shrinked inside the parent element use flex wrap to make them fit properly inside the parent element */
+            
+            /* When defining margins if you use 
+            one value it means all four corners 
+            two values means top-bottom & left-right
+            four values means clockwise top right bottom left */
+
+            div.child{
+                background-color: black;
+                height: 200px;
+                width: 150px;
+                background-color: #ffbf00;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <span></span> -->
+        <!-- <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div> -->
+
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+            <!-- <div class="child"></div> -->
+        </div>
+    </body>
+    
+
+</html>
