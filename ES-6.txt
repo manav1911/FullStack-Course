@@ -1,0 +1,4 @@
+Below are ES-6 features:
+1.Arrow function
+2.Function default params
+3.Template Strings

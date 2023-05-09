@@ -1,0 +1,41 @@
+Types of datatypes:
+1. Number (Float, Double)
+2. String
+3. Boolean
+
+The above are primitive datatypes, means they are defined beforehand.
+
+
+Object is usually an instance of a class.
+Class is a collection of data members that similar properties.
+
+'typeof' operator shows the type of a particular entity.
+
+In JavaScript when we use the dot '.' operator it shows the properties of the object
+
+Semicolumns are not important in JavaScript
+
+What is a a scope? Every variable that exists in the file has a scope, meaning that there is a particular area in which that particular variable can be accessed.
+Local scoped variables that are locally accessible for example in a block.
+Global scoped variables that can be used anywhere, usually defined at global level, can be used anywhere.
+
+What is console in JavaScript? It is an object that is available globally. This object has a lot of methods associated with it, and one of the methods is called log and log is a method which exists on console and is accessed using the dot operator.
+
+console.log(window) is a global object has some functions to manipulate the window.
+
+Functions are used to reduce redundancy if a block is repeated several times we put that block inside the body of a function and instead of repeatedly using the block over and over again we just call the function.
+When naming a function in the paranthesis the parameters are defined
+
+Undefined is a datatype in JavaScript
+
+DATATYPES
+1. Const - Used to declare variable, however the variable can't be changed, also when declaring a variable using const and don't define it with anything JavaScript will throw an error. if we use console.log before declaring the variable it will show an error.
+2. Let - when declaring a variable using let and don't define it with anything, it will be undefined by default. if we use console.log before declaring the variable it will show an error.
+3. Var - Similar to let, but with var the variable has a global scope while the other two has a local (in the block it was declared) scope, if we use console.log before declaring the variable is undefined.
+
+Variables can't be redeclared if they are in the same scope, however can be redeclared if they are not in the same scope.
+
+ARRAYS
+forEach - it abstracts the functionality out, we can't return anything 
+Map -  we can return something, whatever is returned it can be added to the new array, if nothing is defined then an undefined is returned.
+
