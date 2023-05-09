@@ -1,0 +1,5 @@
+What is VCS?
+VCS is also known as Version Control System
+This helps to track between different versions of an application
+
+What a typical VCS does is keeps track of version 1 and version 2 and keeps the changes made in the code between the 2 rather than keeping the whole program code for both the versions.
