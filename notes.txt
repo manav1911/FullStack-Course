@@ -1,0 +1,13 @@
+For every HTML element in your HTML document/web application, the browser creates a node (tree sort of structure)
+It creates a node as it can be accessed using a language (example JS) and change the contents
+DOM stands for Document Object Model - It governs how the tree is created, acts like an interface
+
+Set interval is a inbuilt function to the browser and call the function that we supply at a certain interval in milliseconds 
+
+The difference between append & appendChild is that:
+1. append will append anything, least used
+2. appendChild accepts a node, therefore a string will not work it will throw an error
+
+An HTML collection in JS is an array-like object which stores data similar to array but it does not have functions that we have in arrays
+
+Event listener is an entity that listens to an event.
