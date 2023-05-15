@@ -1,0 +1,1 @@
+Ideally at it's core JS is a single threaded synchronous language
