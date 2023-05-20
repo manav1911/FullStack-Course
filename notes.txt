@@ -1,0 +1,1 @@
+Node js is a runtime and it containes an environment to execute JavaScript code at it's core
