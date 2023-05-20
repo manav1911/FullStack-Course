@@ -38,4 +38,5 @@ const text = 'this is a text'
 // })
 
 const data = fs.readFileSync('temp.txt')
-console.log(data)
+//reading a file
+console.log(data.toString())
