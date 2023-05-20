@@ -1,1 +1,6 @@
 Node js is a runtime and it containes an environment to execute JavaScript code at it's core
+
+Every file we create in Node.Js is a module, allows to create several modules, import them and use them with other modules
+"Require" is a keyword and give it a path to a particular node.js module and imports it for the user
+
+"fs" stands for file system in nodeJs. It allows manipulation of files
