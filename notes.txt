@@ -4,3 +4,9 @@ Every file we create in Node.Js is a module, allows to create several modules, i
 "Require" is a keyword and give it a path to a particular node.js module and imports it for the user
 
 "fs" stands for file system in nodeJs. It allows manipulation of files
+
+UTF-8 is just an encoding. Whenever a file is transfered over the internet or the files are not transmitted or transferred as text therefore it is encoded
+UTF-8 has support for all the modern things such as emojis, characters, asci values
+
+Buffer is an object in JavaScript. It is a temporary storage, we use buffer to read data
+
