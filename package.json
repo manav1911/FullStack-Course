@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/manav1911/FullStack-Course/issues"
   },
-  "homepage": "https://github.com/manav1911/FullStack-Course#readme"
+  "homepage": "https://github.com/manav1911/FullStack-Course#readme",
+  "dependencies": {
+    "nanoid": "^4.0.2"
+  }
 }

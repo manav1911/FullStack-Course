@@ -34,9 +34,5 @@
 // // const data = fs.readFileSync('./temp.txt')
 // // console.log(data.toString())
 
-/*
-    LOCAL MODULES
-*/
-
-const aws = require('aws-sdk')
-console.log(aws)
+const nanoId = require('nanoid')
+console.log(nanoId)
