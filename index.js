@@ -18,7 +18,9 @@ fs.writeFile('./newFile.txt','this is file is overwritten', (error) => {
     }
 })
 
+
 // //Asynchronous function, takes the path of your file
+// //When using readFile make sure to mention the encoding type
 // fs.readFile('./temp.txt','utf-8', (error,data) => {
 //     if(error){
 //         console.log(error)
