@@ -4,3 +4,7 @@ To ignore the modules folder or any other folder do the following:
 
 Run scripts in package.json
     1. npm run "script_name"
+
+Difference between a library and a framework?
+Library contains some utilities/functions that a developer can use in any form, anywhere on the other hand a framework have multiple libraries built that are used inside it.
+Unlike library it can't be used in any form, anywhere. 
