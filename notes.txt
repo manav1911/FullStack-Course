@@ -1,0 +1,3 @@
+To ignore the modules folder or any other folder do the following:
+    1. touch .gitignore
+    2. Put the file/folder name in the .gitignore file
