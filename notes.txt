@@ -1,3 +1,6 @@
 To ignore the modules folder or any other folder do the following:
     1. touch .gitignore
     2. Put the file/folder name in the .gitignore file
+
+Run scripts in package.json
+    1. npm run "script_name"
