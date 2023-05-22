@@ -11,4 +11,6 @@ Unlike library it can't be used in any form, anywhere.
 
 Server is an entity that serves one
 
-What happens when we
+Protocol is a set of rules to do something, operational rules. 
+
+HTTP is Hyper Text Transfer Protocol. There are different type of requests such as get, post(overwrite something), put, delete, options, trace, patch(Update something)
