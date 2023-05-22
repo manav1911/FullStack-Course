@@ -7,4 +7,8 @@ Run scripts in package.json
 
 Difference between a library and a framework?
 Library contains some utilities/functions that a developer can use in any form, anywhere on the other hand a framework have multiple libraries built that are used inside it.
-Unlike library it can't be used in any form, anywhere. 
+Unlike library it can't be used in any form, anywhere.
+
+Server is an entity that serves one
+
+What happens when we
