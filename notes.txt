@@ -2,3 +2,4 @@ Middleswares in express is a function where a logic is added and can be appied t
 
 In production we do not have any logs, only in development we use logs
 
+Difference between put and patch is that when we use put we override the data and for patch we update the data 
