@@ -3,3 +3,5 @@ Request containes all the headers
 In every endpoint that we make a reques to we're using http so there will be a URL for a request.
 In every URl, we can attach variable that contain information these are called query parameters
 
+Middlware is a function that is executed in the middle of something. Therefore, what express does is, you can define the middleware funcitons and express will execute the middleware functions first and then it will move on to the actual routing 
+Use of middelware - Used to solve a very specific purpose. To intercept requests eg banning requests from specific IPs

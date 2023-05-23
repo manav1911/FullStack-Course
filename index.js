@@ -3,6 +3,22 @@ const port = 8080
 const app = express()
 const fs = require('fs')
 
+// //Middleswares - First to be ran
+// const logUserIp= (req,res,next) => {
+//     console.log('middleware function ran')
+//     //if we don't call the next function, it gets stuck at processing. It's a must to call next
+//     next()
+// }
+const logUserAgent= (req,res,next) => {
+    const agent = req.headers['user-agent']
+    // console.log(agent)
+    if (agent.includes('Chrome'))
+    return res.status(403).send
+    ('Unauthorised')
+    next()
+}
+app.use(logUserAgent)
+
 //The get method below does the following: So when we make a request to the slash route the 
 app.get('/', (request, response) => {
     response.send('First response from express server!!').status(200)
