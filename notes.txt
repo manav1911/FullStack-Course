@@ -1,1 +1,4 @@
-Express is a nodeJs framework it uses http module under the hood and it allows to create REST APIs
+Request containes all the headers
+
+In every endpoint that we make a reques to we're using http so there will be a URL for a request.
+In every URl, we can attach variable that contain information

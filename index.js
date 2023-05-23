@@ -10,6 +10,12 @@ app.get('/', (request,response) => {
 
 
 app.get('/todos',(req,res)=>{
+    console.log({
+        headers:req.headers,
+        body:req.body,
+        params:req.params,
+        query:req.query
+    })
     fs.readFile('./db.js','utf-8',(err,data)=>{
         if(err){
             console.log(err)
@@ -22,7 +28,6 @@ app.get('/todos',(req,res)=>{
         res.status(200).json(
             JSON.parse(data)
         )
-        
     })
 })
 
