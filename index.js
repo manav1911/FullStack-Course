@@ -13,11 +13,18 @@ const logUserAgent= (req,res,next) => {
     const agent = req.headers['user-agent']
     // console.log(agent)
     if (agent.includes('Chrome'))
-    return res.status(403).send
-    ('Unauthorised')
+    return res.status(403).send('Unauthorised')
     next()
 }
+
+const logger = (req,res,next)=>{
+    console.log(`Request method: ${req.method} and request path: ${req.path}`)
+    next()
+}
+
 app.use(logUserAgent)
+app.use(logger)
+
 
 //The get method below does the following: So when we make a request to the slash route the 
 app.get('/', (request, response) => {
