@@ -1,4 +1,5 @@
 Request containes all the headers
 
 In every endpoint that we make a reques to we're using http so there will be a URL for a request.
-In every URl, we can attach variable that contain information
+In every URl, we can attach variable that contain information these are called query parameters
+
