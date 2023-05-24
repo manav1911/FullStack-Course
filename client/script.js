@@ -88,10 +88,12 @@ const handleAdd = async (e) => {
       input.value = ""
       getData()
       return
-    } else {
+    } 
+    else {
       return window.alert("adding an empty item is not possible")
     }
-  } catch (error) {
+  } 
+  catch (error) {
     console.log(error)
   }
 }
@@ -119,7 +121,8 @@ const handleEdit = async (id, todo) => {
     })
     getData()
     return
-  } catch (error) {
+  }
+  catch (error) {
     console.log(error)
   }
 }
@@ -131,9 +134,11 @@ function renderList(todos) {
     todoContainer.appendChild(todoElement)
     if (todo.isComplete === true) {
       todoElement.innerHTML = listItemComplete(todo.title)
-    } else {
+    }
+    else {
       todoElement.innerHTML = listItemIncomplete(todo.title)
     }
+
     const removeButton = todoElement.querySelector(".remove-button")
     removeButton.addEventListener("click", () =>
       handleDelete(todoElement, todo.id)
