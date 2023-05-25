@@ -1,0 +1,10 @@
+A token is an alpha-numeric text
+
+To decode a token we use https://jwt.io/
+
+base64 is way to encode or decode text
+
+So the jwt converts to base64. Every JWT has
+    1. Header - Type:jwt, alg:SHA256 || HSA
+    2. Signature - No other token can be created the same cause every token has a unique signature
+                    Can be inside a cookie, etc. To ensure the data is secure

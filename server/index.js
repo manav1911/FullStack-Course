@@ -1,7 +1,11 @@
 const express = require("express");
 const fs = require("fs");
 const uuid = require("uuid");
-const cors = require('cors')
+const cors = require("cors");
+const jwt = require('jsonwebtoken')
+
+const SECRET_KEY = "secret_key_sdf"
+
 
 const PORT = 8080;
 
@@ -11,12 +15,42 @@ const logger = (req, res, next) => {
   console.log(`Request method: ${req.method} and request path: ${req.path}`);
   next();
 };
-app.use(cors())
+app.use(cors());
 app.use(logger);
 app.use(express.json());
 
+const isAuthenticated = async (req, res, next) => {
+  // check for auth header if ther's no header send 401
+  try {
+    const { authorisation:token } = req.headers;
+    jwt.verify(token,SECRET_KEY)
+    next()
+  } catch (error) {
+   return res.status(401).json({
+      message: "Invalid token",
+      data: null,
+    });
+  }
+};
+
 app.get("/ping", (req, res) => {
   res.status(200).send("PONG");
+});
+
+app.get("/login", async (req, res) => {
+  const token = jwt.sign({
+    name: 'John Doe',
+    age: 30,
+    uid:12
+  },SECRET_KEY,{
+    expiresIn:'1h'
+  })
+  return res.status(200).json({
+    message: "Successfully logged in",
+    data: {
+      token,
+    },
+  });
 });
 
 // create an endpoint to get all of the todos
@@ -26,9 +60,10 @@ app.get("/ping", (req, res) => {
  * status: 200
  * data: {}
  * message: "Success"
+ * HEADER authorisation : token
  */
 
-app.get("/todos", async (req, res) => {
+app.get("/todos", isAuthenticated, async (req, res) => {
   try {
     const data = await fs.promises.readFile("./db.json", "utf-8");
     return res.status(200).json({
@@ -44,7 +79,7 @@ app.get("/todos", async (req, res) => {
 });
 
 // create an endpoint to add a todo
-app.post("/todos", async (req, res) => {
+app.post("/todos", isAuthenticated, async (req, res) => {
   try {
     console.log(req.body);
     const { title } = req.body;
@@ -62,7 +97,7 @@ app.post("/todos", async (req, res) => {
       data: parsedData,
     });
   } catch (error) {
-    console.log(error )
+    console.log(error);
     return res.status(500).json({
       message: "Internal Server Error",
       data: null,
@@ -71,59 +106,22 @@ app.post("/todos", async (req, res) => {
 });
 
 // create an endpoint to delete a todo
-
-app.delete('/todos/:id', async (req, res) => {
+app.delete("/todos/:id", isAuthenticated, async (req, res) => {
   try {
     const { id } = req.params;
     const data = await fs.promises.readFile("./db.json", "utf-8");
     const parsedData = JSON.parse(data);
     const todo = parsedData.find((todo) => todo.id === id);
-    if(todo){
+    if (todo) {
       // delete the todo from array
       const filteredData = parsedData.filter((todo) => todo.id !== id);
       await fs.promises.writeFile("./db.json", JSON.stringify(filteredData));
       return res.status(200).json({
-        message:"Todo deleted successfully",
-        data: filteredData
-      })
+        message: "Todo deleted successfully",
+        data: filteredData,
+      });
     }
-     return res.status(400).json({
-      message: "Todo with this id does not exist",
-      data: null,
-    });
-  } catch (error) {
-     return res.status(500).json({
-      message: "Internal Server Error",
-      data: null,
-    });
-  }
-})
-
-// create an endpoint to update a todo
-app.patch('/todos/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { title, isComplete } = req.body;
-     const parsedData = JSON.parse(data);
-    const todo = parsedData.find((todo) => todo.id === id);
-    if(title && title === '') return res.status(400).json({
-      message: "Todo title can not be empty",
-      data: null,
-    });
-    if(todo){
-      // delete the todo from array
-      todo={
-        ...todo,
-        title: title || todo.title,
-        isComplete: isComplete || todo.isComplete
-      }
-      await fs.promises.writeFile("./db.json", JSON.stringify(parsedData));
-      return res.status(200).json({
-        message:"Todo deleted successfully",
-        data: parsedData
-      })
-    }
-     return res.status(400).json({
+    return res.status(400).json({
       message: "Todo with this id does not exist",
       data: null,
     });
@@ -133,7 +131,42 @@ app.patch('/todos/:id', async (req, res) => {
       data: null,
     });
   }
-})
+});
+
+// create an endpoint to update a todo
+app.patch("/todos/:id", isAuthenticated, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, isComplete } = req.body;
+    const data = await fs.promises.readFile("./db.json", "utf-8");
+    const parsedData = JSON.parse(data);
+    let todo = parsedData.find((todo) => todo.id === id);
+    if (title && title === "")
+      return res.status(400).json({
+        message: "Todo title can not be empty",
+        data: null,
+      });
+    if (todo) {
+      // delete the todo from array
+      todo.isComplete = isComplete;
+      await fs.promises.writeFile("./db.json", JSON.stringify(parsedData));
+      return res.status(200).json({
+        message: "Todo updated successfully",
+        data: parsedData,
+      });
+    }
+    return res.status(400).json({
+      message: "Todo with this id does not exist",
+      data: null,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Internal Server Error",
+      data: null,
+    });
+  }
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
