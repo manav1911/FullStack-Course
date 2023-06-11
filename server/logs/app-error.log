@@ -1,2 +1,7 @@
 {"level":"\u001b[31merror\u001b[39m","message":"\u001b[31mThe `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\u001b[39m","timestamp":"2023-06-11 13:23:18"}
 {"level":"\u001b[31merror\u001b[39m","message":"\u001b[31mThe `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\u001b[39m","timestamp":"2023-06-11 13:24:19"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2023-06-11 14:46:30"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2023-06-11 14:47:37"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2023-06-11 14:48:58"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2023-06-11 14:49:26"}
+{"level":"\u001b[31merror\u001b[39m","timestamp":"2023-06-11 14:51:28"}

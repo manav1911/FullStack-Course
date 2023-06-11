@@ -13,7 +13,6 @@
     - isDisabled : Boolean
     - followers : [User]
     - following : [User]
-    - savedPosts : [Post]
     - role : Enum[0,1,2] // 0 is normal user, 1 is moderator, 2 is admin
     - lastLogin : Date
     - createdAt : Date
@@ -37,6 +36,7 @@
     - id : String
     - commentText : String
     - user : User
+    - post : User
     - likes : [User]
     - createdAt : Date
     - updatedAt : Date
