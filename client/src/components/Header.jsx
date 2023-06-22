@@ -1,15 +1,30 @@
-const Header = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(e.target)
-    }
+import { useState } from "react";
+import { nanoid } from "nanoid";
 
-    return (
-      <header>
-        <h1>Todo list</h1>
-        <input type="text" />
-        <button onClick={handleSubmit}>Add</button>
-      </header>
-    );
+const Header = ({ setTodos }) => {
+  const [todo, setTodo] = useState("");
+
+  const handleSubmit = (e) => {
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      {
+        id: nanoid(),
+        title: todo,
+        complete: false,
+      },
+    ]);
   };
-export default Header;  
+
+  const handleChange = (e) => {
+    setTodo(e.target.value);
+  };
+
+  return (
+    <header>
+      <h1>Todo list</h1>
+      <input onChange={handleChange} type="text" />
+      <button onClick={handleSubmit}>Add</button>
+    </header>
+  );
+};
+export default Header;
