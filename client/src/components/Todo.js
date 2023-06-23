@@ -1,3 +1,5 @@
+//React component
+
 const Todo = ({ todo ,changeState,deleteTodo}) => {
   const { id, title, complete } = todo;
 
