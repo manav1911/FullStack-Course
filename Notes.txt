@@ -10,3 +10,5 @@ Rendering is the process in which a component is added to the DOM
 useEffect is a function that is used to capture side effects, a side effect are the lifecycle events
 
 Ideally, when a componenet unmounts we should remove the EventListener, as it eats up memory. it does consume CPU
+
+Debouncing - 

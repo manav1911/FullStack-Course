@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [name, setName] = useState("");
 
+  //Debouncing 
   useEffect(() => {
     const timeout = setTimeout(() => {
       console.log("making api call");
