@@ -1,0 +1,12 @@
+Lifecycle of a react component:
+    1. Mounting - Is like render, but the first render is called mount. N/B: When a componenet is mounted 
+                  state reinitialized. State is only initialized when the component mounts.
+    2. Updating - Re-rendering 
+    3. Unmounting - Removing the component
+    4. Error
+
+Rendering is the process in which a component is added to the DOM
+
+useEffect is a function that is used to capture side effects, a side effect are the lifecycle events
+
+Ideally, when a componenet unmounts we should remove the EventListener, as it eats up memory. it does consume CPU

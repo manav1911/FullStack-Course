@@ -4,6 +4,7 @@ const Timer = () => {
   const [count, setCount] = useState(0);
   const [name, setName] = useState("John");
 
+  //Execute the interval and display the count
   const initialiseTimer = () => {
     const interval = setInterval(() => {
       setCount((prev) => prev + 1);
