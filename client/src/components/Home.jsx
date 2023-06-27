@@ -18,6 +18,7 @@ const Home = () => {
 
   return (
     <div>
+      <h1>Search</h1>
       <input onChange={handleChange} type="text" />
       <div>{name}</div>
     </div>
