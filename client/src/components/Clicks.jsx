@@ -9,6 +9,7 @@ const Clicks = () => {
 
   useEffect(() => {
     document.addEventListener("click", listenClicks);
+    //remove the event listener on clicks
     return () => document.removeEventListener("click", listenClicks);
   }, []);
 
