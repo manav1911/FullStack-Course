@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 8080
 connectDB()
 
 app.use(cors(
+    // This ensure that credentials are got from this origin only
     {
         origin: 'http://localhost:3000',
         credentials: true

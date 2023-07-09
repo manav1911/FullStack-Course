@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 const Home = ({ state: { token, user } }) => {
   const navigate = useNavigate();
 
+  //Redirects the user if there no token available
   useEffect(() => {
     if (!token) {
       navigate("/login");

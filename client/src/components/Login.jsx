@@ -5,6 +5,7 @@ import axios from "axios";
 const Login = ({ state: { token, user }, setState }) => {
   const navigate = useNavigate();
 
+  //If there is a user then just show them the list
   useEffect(() => {
     if (token) {
       navigate("/");
@@ -18,7 +19,7 @@ const Login = ({ state: { token, user }, setState }) => {
   const handleSubmit = async (e) => {
     try {
       setLoading(true);
-      e.preventDefault();
+      e.preventDefault(); //Avoids the entire page from refreshing
       const {
         data: { token, user },
       } = await axios.post("http://localhost:8080/login", { email, password });

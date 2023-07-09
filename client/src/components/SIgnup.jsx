@@ -4,9 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 const Signup = ({ token, user }) => {
   const navigate = useNavigate();
 
+  //Same as login but this is for signup
   useEffect(() => {
     if (!token) {
-      navigate("/login");
+      navigate("/signup");
     }
   }, []);
 

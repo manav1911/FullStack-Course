@@ -21,7 +21,7 @@ const App = () => {
       if (localStorage.getItem("token")) {
         // make a req to server to validate the token
         const res = await axios.get(
-          `http://localhost:8080/validatetoken/${localStorage.getItem("token")}`
+          `http://localhost:3000/validatetoken/${localStorage.getItem("token")}`
         );
         const { user, token } = res.data;
         setState({ user, token });
